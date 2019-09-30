@@ -1,0 +1,10 @@
+version: "3"
+services:
+  ansible:
+    build: ansible
+  api1:
+    image: rastasheep/ubuntu-sshd:latest # sshでかんたんにログインできる設定済みイメージ. https://hub.docker.com/r/rastasheep/ubuntu-sshd 本番では絶対、鍵認証にしましょう.
+  api2:
+    image: rastasheep/ubuntu-sshd:latest
+  api3:
+    image: rastasheep/ubuntu-sshd:latest
