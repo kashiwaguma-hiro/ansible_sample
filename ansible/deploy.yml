@@ -9,7 +9,7 @@
     ansistrano_keep_releases: 3
 
     ansistrano_deploy_via: download
-    ansistrano_get_url: "URL HERE"
+    ansistrano_get_url: "{{ download_url }}"
     ansistrano_download_headers: "Authorization: Basic {{ [basic_username, basic_password] | join(':') | b64encode}}"
 
     # カスタマイズのタスク設定 https://github.com/ansistrano/deploy#role-variables
