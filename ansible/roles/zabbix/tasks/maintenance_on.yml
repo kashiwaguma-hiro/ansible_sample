@@ -1,0 +1,3 @@
+---
+- name: Zabbix mainte mode on
+  command: echo "Zabbix mainte mode on"

@@ -1,0 +1,3 @@
+---
+- name: Stopping API
+  command: echo "stopping api..."
