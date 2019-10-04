@@ -4,6 +4,7 @@
 
 デプロイ対象のサーバを起動しておく
 ```
+$ docker-compose build
 $ docker-compose up -d
 ```
 
