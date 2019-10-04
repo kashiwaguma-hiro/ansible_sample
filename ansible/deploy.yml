@@ -5,16 +5,14 @@
   serial: 1 # タスクの同時実行数を1台とする
   any_errors_fatal: True # 1つでもエラーが起きた時点で失敗と判断し中断する
   vars:
+    # デプロイの基本設定
     ansistrano_deploy_from: "{{ playbook_dir }}"
     ansistrano_deploy_to: "/opt/api/bin/"
     ansistrano_keep_releases: 3
 
+    # モジュールのダウンロード設定
     ansistrano_deploy_via: download
     ansistrano_get_url: "{{ download_url }}"
     ansistrano_download_headers: "Authorization: Basic {{ [basic_username, basic_password] | join(':') | b64encode}}"
-
-    # カスタマイズのタスク設定 https://github.com/ansistrano/deploy#role-variables
-    ansistrano_before_symlink_tasks_file: "{{ playbook_dir }}/roles/api/tasks/stop.yml"
-    ansistrano_after_symlink_tasks_file: "{{ playbook_dir }}/roles/api/tasks/start.yml"
   roles:
     - { role: ansistrano.deploy }

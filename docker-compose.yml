@@ -11,3 +11,7 @@ services:
     image: rastasheep/ubuntu-sshd:latest
   api3:
     image: rastasheep/ubuntu-sshd:latest
+  batch1:
+    image: rastasheep/ubuntu-sshd:latest
+  batch2:
+    image: rastasheep/ubuntu-sshd:latest
