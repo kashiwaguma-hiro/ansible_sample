@@ -1,4 +1,5 @@
 ---
+# Playbook for deployment
 - name: Deploy
   hosts: all # すべてのホストを対象とする
   serial: 1 # タスクの同時実行数を1台とする
